@@ -1,0 +1,28 @@
+{
+  "name": "jm-passport-mobile",
+  "version": "1.0.0",
+  "description": "mobile plugin for jm-passport",
+  "main": "./lib/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jm-root/jm-passport-mobile.git"
+  },
+  "keywords": [
+    "javascript",
+    "jm-passport-mobile"
+  ],
+  "author": {
+    "name": "Jeff YU"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jm-root/jm-passport-mobile/issues"
+  },
+  "homepage": "https://github.com/jm-root/jm-passport-mobile",
+  "dependencies": {
+    "jm-sso": "^1.0.1",
+    "jm-user": "^1.0.5",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
+  }
+}
