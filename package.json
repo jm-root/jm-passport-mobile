@@ -1,6 +1,6 @@
 {
   "name": "jm-passport-mobile",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "mobile plugin for jm-passport",
   "main": "./lib/index",
   "repository": {
