@@ -6,6 +6,8 @@ mobile plugin for jm-passport
 
 gateway [] api gateway
 
+disableCaptcha 禁止图形验证码
+
 SignName 阿里云短信签名
 
 TemplateCode 阿里云短信模板编号
