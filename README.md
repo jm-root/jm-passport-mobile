@@ -8,7 +8,9 @@ passport service for mobile
 
 gateway [] api gateway
 
-code_key_prefix ['sms:'] 验证码key前缀
+captcha_key_prefix ['captcha:'] 图像验证码key前缀
+
+sms_key_prefix ['sms:'] 短信验证码key前缀
 
 disable_captcha 禁止图形验证码
 

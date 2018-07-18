@@ -9,7 +9,25 @@ info:
   title: jm-passport-mobile-api
   description: 通行证系统API(手机+验证码)
 paths:
-  /login:
+  /passport/sms/{mobile}:
+    get:
+      responses:
+        '200':
+          description: 发送短信验证码
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenInfo'
+  /passport/sms/{mobile}/verify:
+    get:
+      responses:
+        '200':
+          description: 验证短信验证码
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenInfo'
+  /passport/login:
     post:
       responses:
         '200':
@@ -23,26 +41,13 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LoginInfo'
-  /login/{openid}:
-    post:
-      parameters:
-        - name: openid
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: 登陆成功
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TokenInfo'
 components:
   schemas:
     LoginInfo:
       type: object
       properties:
+        mobile:
+          type: string
         code:
           type: string
       description: code
