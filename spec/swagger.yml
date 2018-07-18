@@ -17,16 +17,16 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TokenInfo'
+                $ref: '#/components/schemas/KeyInfo'
   /passport/sms/{mobile}/verify:
     get:
       responses:
         '200':
-          description: 验证短信验证码
+          description: 校验短信验证码
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TokenInfo'
+                $ref: '#/components/schemas/KeyInfo'
   /passport/login:
     post:
       responses:
@@ -69,3 +69,19 @@ components:
           format: int64
           example: 1524634308844
       description: Token信息
+    KeyInfo:
+      type: object
+      properties:
+        key:
+          type: string
+        code:
+          type: string
+        expire:
+          type: integer
+          format: int32
+          example: 600
+        time:
+          type: integer
+          format: int64
+          example: 1524634308844
+      description: 验证码信息
