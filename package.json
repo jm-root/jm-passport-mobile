@@ -1,8 +1,13 @@
 {
   "name": "jm-passport-mobile",
-  "version": "1.0.8",
-  "description": "mobile plugin for jm-passport",
+  "version": "2.0.0",
+  "description": "passport service for mobile",
   "main": "./lib/index",
+  "scripts": {
+    "start": "jm-server",
+    "cluster": "jm-server --cluster",
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jm-root/jm-passport-mobile.git"
@@ -20,9 +25,15 @@
   },
   "homepage": "https://github.com/jm-root/jm-passport-mobile",
   "dependencies": {
-    "jm-sso": "^1.0.1",
-    "jm-user": "^1.0.5",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0"
+    "jm-server": "^1.0.9"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.3"
   }
 }
